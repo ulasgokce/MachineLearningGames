@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MachineLearningGames.Alihan;
 
 namespace MachineLearningGames
 {
@@ -37,6 +38,17 @@ namespace MachineLearningGames
             school_library.Visible = false;
             pnlMain.Controls.Add(school_library);
             transitionGames.ShowSync(school_library);
+        }
+
+        private void bunifuImageButton7_Click(object sender, EventArgs e)
+        {
+            Titanic titanic = new Titanic();
+            titanic.main = main;
+            pnlMain.Controls.Clear();
+            titanic.Visible = false;
+            pnlMain.Controls.Add(titanic);
+            transitionGames.ShowSync(titanic);
+
         }
     }
 }
