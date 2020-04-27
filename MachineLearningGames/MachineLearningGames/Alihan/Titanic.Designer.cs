@@ -34,16 +34,13 @@
             this.transitionTabs = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
-            this.btnTest = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnTrain = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnHome = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnTest = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnTrain = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnHome = new Bunifu.Framework.UI.BunifuTileButton();
             this.pbGame = new System.Windows.Forms.PictureBox();
             this.lblGameName = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnlBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTest)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTrain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGame)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,45 +94,69 @@
             // btnTest
             // 
             this.btnTest.BackColor = System.Drawing.Color.Transparent;
+            this.btnTest.color = System.Drawing.Color.Transparent;
+            this.btnTest.colorActive = System.Drawing.Color.Transparent;
+            this.btnTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.transitionTabs.SetDecoration(this.btnTest, BunifuAnimatorNS.DecorationType.None);
+            this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnTest.ForeColor = System.Drawing.Color.White;
             this.btnTest.Image = ((System.Drawing.Image)(resources.GetObject("btnTest.Image")));
-            this.btnTest.ImageActive = null;
+            this.btnTest.ImagePosition = 16;
+            this.btnTest.ImageZoom = 50;
+            this.btnTest.LabelPosition = 33;
+            this.btnTest.LabelText = "";
             this.btnTest.Location = new System.Drawing.Point(1083, 0);
+            this.btnTest.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(133, 123);
-            this.btnTest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnTest.TabIndex = 5;
-            this.btnTest.TabStop = false;
-            this.btnTest.Zoom = 10;
+            this.btnTest.Size = new System.Drawing.Size(116, 111);
+            this.btnTest.TabIndex = 2;
+            this.btnTest.MouseLeave += new System.EventHandler(this.btnTest_MouseLeave);
+            this.btnTest.MouseHover += new System.EventHandler(this.btnTest_MouseHover);
             // 
             // btnTrain
             // 
             this.btnTrain.BackColor = System.Drawing.Color.Transparent;
+            this.btnTrain.color = System.Drawing.Color.Transparent;
+            this.btnTrain.colorActive = System.Drawing.Color.Transparent;
+            this.btnTrain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.transitionTabs.SetDecoration(this.btnTrain, BunifuAnimatorNS.DecorationType.None);
+            this.btnTrain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnTrain.ForeColor = System.Drawing.Color.White;
             this.btnTrain.Image = ((System.Drawing.Image)(resources.GetObject("btnTrain.Image")));
-            this.btnTrain.ImageActive = null;
+            this.btnTrain.ImagePosition = 16;
+            this.btnTrain.ImageZoom = 50;
+            this.btnTrain.LabelPosition = 33;
+            this.btnTrain.LabelText = "";
             this.btnTrain.Location = new System.Drawing.Point(933, 0);
+            this.btnTrain.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnTrain.Name = "btnTrain";
-            this.btnTrain.Size = new System.Drawing.Size(133, 123);
-            this.btnTrain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnTrain.TabIndex = 4;
-            this.btnTrain.TabStop = false;
-            this.btnTrain.Zoom = 10;
+            this.btnTrain.Size = new System.Drawing.Size(116, 111);
+            this.btnTrain.TabIndex = 1;
+            this.btnTrain.MouseLeave += new System.EventHandler(this.btnTrain_MouseLeave);
+            this.btnTrain.MouseHover += new System.EventHandler(this.btnTrain_MouseHover);
             // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.color = System.Drawing.Color.Transparent;
+            this.btnHome.colorActive = System.Drawing.Color.Transparent;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.transitionTabs.SetDecoration(this.btnHome, BunifuAnimatorNS.DecorationType.None);
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageActive = null;
+            this.btnHome.ImagePosition = 16;
+            this.btnHome.ImageZoom = 50;
+            this.btnHome.LabelPosition = 33;
+            this.btnHome.LabelText = "";
             this.btnHome.Location = new System.Drawing.Point(784, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(133, 123);
-            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnHome.TabIndex = 3;
-            this.btnHome.TabStop = false;
-            this.btnHome.Zoom = 10;
+            this.btnHome.TabIndex = 0;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
+            this.btnHome.MouseHover += new System.EventHandler(this.btnHome_MouseHover);
             // 
             // pbGame
             // 
@@ -173,9 +194,6 @@
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.pnlBottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnTest)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTrain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGame)).EndInit();
             this.ResumeLayout(false);
 
@@ -188,8 +206,8 @@
         private System.Windows.Forms.Label lblGameName;
         private System.Windows.Forms.PictureBox pbGame;
         private System.Windows.Forms.Panel pnlBottom;
-        private Bunifu.Framework.UI.BunifuImageButton btnTest;
-        private Bunifu.Framework.UI.BunifuImageButton btnTrain;
-        private Bunifu.Framework.UI.BunifuImageButton btnHome;
+        private Bunifu.Framework.UI.BunifuTileButton btnTest;
+        private Bunifu.Framework.UI.BunifuTileButton btnTrain;
+        private Bunifu.Framework.UI.BunifuTileButton btnHome;
     }
 }
