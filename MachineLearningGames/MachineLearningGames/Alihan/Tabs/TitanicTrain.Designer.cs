@@ -53,7 +53,7 @@
             this.pnlSurvived = new System.Windows.Forms.Panel();
             this.pnlNotSurvived = new System.Windows.Forms.Panel();
             this.itemListNotSurvived = new System.Windows.Forms.ListBox();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.drpState = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel.SuspendLayout();
             this.pnlList.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
-            this.panel.Controls.Add(this.bunifuDropdown1);
+            this.panel.Controls.Add(this.drpState);
             this.panel.Controls.Add(this.bunifuCustomLabel1);
             this.panel.Controls.Add(this.btnStartTrain);
             this.panel.Controls.Add(this.lblItemCount);
@@ -405,25 +405,25 @@
             this.itemListNotSurvived.Size = new System.Drawing.Size(1000, 409);
             this.itemListNotSurvived.TabIndex = 1;
             // 
-            // bunifuDropdown1
+            // drpState
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.Items = new string[] {
+            this.drpState.BackColor = System.Drawing.Color.Transparent;
+            this.drpState.BorderRadius = 3;
+            this.drpState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.drpState.DisabledColor = System.Drawing.Color.Gray;
+            this.drpState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.drpState.ForeColor = System.Drawing.Color.Black;
+            this.drpState.Items = new string[] {
         "Hayatta kaldı",
         "Hayatta kalamadı"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(1666, 93);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.selectedIndex = 0;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(282, 43);
-            this.bunifuDropdown1.TabIndex = 25;
+            this.drpState.Location = new System.Drawing.Point(1666, 93);
+            this.drpState.Margin = new System.Windows.Forms.Padding(4);
+            this.drpState.Name = "drpState";
+            this.drpState.NomalColor = System.Drawing.Color.Silver;
+            this.drpState.onHoverColor = System.Drawing.Color.White;
+            this.drpState.selectedIndex = 0;
+            this.drpState.Size = new System.Drawing.Size(282, 43);
+            this.drpState.TabIndex = 25;
             // 
             // bunifuCustomLabel1
             // 
@@ -477,7 +477,7 @@
         private System.Windows.Forms.ListBox itemListNotSurvived;
         private System.Windows.Forms.Panel pnlSurvived;
         private System.Windows.Forms.ListBox itemListSurvived;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown drpState;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
