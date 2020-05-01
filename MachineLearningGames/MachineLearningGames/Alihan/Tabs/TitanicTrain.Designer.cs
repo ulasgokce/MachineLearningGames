@@ -50,19 +50,23 @@
             this.lblGender = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTicketClass = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.itemListSurvived = new System.Windows.Forms.ListBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSurvived = new System.Windows.Forms.Panel();
+            this.pnlNotSurvived = new System.Windows.Forms.Panel();
             this.itemListNotSurvived = new System.Windows.Forms.ListBox();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel.SuspendLayout();
             this.pnlList.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlSurvived.SuspendLayout();
+            this.pnlNotSurvived.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.Controls.Add(this.bunifuDropdown1);
+            this.panel.Controls.Add(this.bunifuCustomLabel1);
             this.panel.Controls.Add(this.btnStartTrain);
             this.panel.Controls.Add(this.lblItemCount);
             this.panel.Controls.Add(this.lblDataCount);
@@ -107,7 +111,7 @@
             this.btnStartTrain.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnStartTrain.IdleForecolor = System.Drawing.Color.Orange;
             this.btnStartTrain.IdleLineColor = System.Drawing.Color.Orange;
-            this.btnStartTrain.Location = new System.Drawing.Point(1560, 191);
+            this.btnStartTrain.Location = new System.Drawing.Point(1586, 244);
             this.btnStartTrain.Margin = new System.Windows.Forms.Padding(5);
             this.btnStartTrain.Name = "btnStartTrain";
             this.btnStartTrain.Size = new System.Drawing.Size(319, 67);
@@ -119,7 +123,7 @@
             // 
             this.lblItemCount.AutoSize = true;
             this.lblItemCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblItemCount.Location = new System.Drawing.Point(156, 226);
+            this.lblItemCount.Location = new System.Drawing.Point(180, 279);
             this.lblItemCount.Name = "lblItemCount";
             this.lblItemCount.Size = new System.Drawing.Size(31, 32);
             this.lblItemCount.TabIndex = 24;
@@ -129,7 +133,7 @@
             // 
             this.lblDataCount.AutoSize = true;
             this.lblDataCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDataCount.Location = new System.Drawing.Point(3, 226);
+            this.lblDataCount.Location = new System.Drawing.Point(27, 279);
             this.lblDataCount.Name = "lblDataCount";
             this.lblDataCount.Size = new System.Drawing.Size(160, 32);
             this.lblDataCount.TabIndex = 23;
@@ -153,7 +157,7 @@
             this.btnAdd.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnAdd.IdleForecolor = System.Drawing.Color.Orange;
             this.btnAdd.IdleLineColor = System.Drawing.Color.Orange;
-            this.btnAdd.Location = new System.Drawing.Point(1560, 114);
+            this.btnAdd.Location = new System.Drawing.Point(1586, 167);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(319, 67);
@@ -163,12 +167,12 @@
             // 
             // pnlList
             // 
-            this.pnlList.Controls.Add(this.panel2);
-            this.pnlList.Controls.Add(this.panel1);
+            this.pnlList.Controls.Add(this.pnlNotSurvived);
+            this.pnlList.Controls.Add(this.pnlSurvived);
             this.pnlList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlList.Location = new System.Drawing.Point(0, 266);
+            this.pnlList.Location = new System.Drawing.Point(0, 336);
             this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(2000, 479);
+            this.pnlList.Size = new System.Drawing.Size(2000, 409);
             this.pnlList.TabIndex = 21;
             // 
             // txtTickerFare
@@ -368,26 +372,26 @@
             this.itemListSurvived.ItemHeight = 18;
             this.itemListSurvived.Location = new System.Drawing.Point(0, 0);
             this.itemListSurvived.Name = "itemListSurvived";
-            this.itemListSurvived.Size = new System.Drawing.Size(1000, 479);
+            this.itemListSurvived.Size = new System.Drawing.Size(1000, 409);
             this.itemListSurvived.TabIndex = 0;
             // 
-            // panel1
+            // pnlSurvived
             // 
-            this.panel1.Controls.Add(this.itemListSurvived);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 479);
-            this.panel1.TabIndex = 0;
+            this.pnlSurvived.Controls.Add(this.itemListSurvived);
+            this.pnlSurvived.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSurvived.Location = new System.Drawing.Point(0, 0);
+            this.pnlSurvived.Name = "pnlSurvived";
+            this.pnlSurvived.Size = new System.Drawing.Size(1000, 409);
+            this.pnlSurvived.TabIndex = 0;
             // 
-            // panel2
+            // pnlNotSurvived
             // 
-            this.panel2.Controls.Add(this.itemListNotSurvived);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1000, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 479);
-            this.panel2.TabIndex = 1;
+            this.pnlNotSurvived.Controls.Add(this.itemListNotSurvived);
+            this.pnlNotSurvived.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlNotSurvived.Location = new System.Drawing.Point(1000, 0);
+            this.pnlNotSurvived.Name = "pnlNotSurvived";
+            this.pnlNotSurvived.Size = new System.Drawing.Size(1000, 409);
+            this.pnlNotSurvived.TabIndex = 1;
             // 
             // itemListNotSurvived
             // 
@@ -398,8 +402,38 @@
             this.itemListNotSurvived.ItemHeight = 18;
             this.itemListNotSurvived.Location = new System.Drawing.Point(0, 0);
             this.itemListNotSurvived.Name = "itemListNotSurvived";
-            this.itemListNotSurvived.Size = new System.Drawing.Size(1000, 479);
+            this.itemListNotSurvived.Size = new System.Drawing.Size(1000, 409);
             this.itemListNotSurvived.TabIndex = 1;
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BorderRadius = 3;
+            this.bunifuDropdown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.Items = new string[] {
+        "Hayatta kaldı",
+        "Hayatta kalamadı"};
+            this.bunifuDropdown1.Location = new System.Drawing.Point(1666, 93);
+            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.NomalColor = System.Drawing.Color.Silver;
+            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.selectedIndex = 0;
+            this.bunifuDropdown1.Size = new System.Drawing.Size(282, 43);
+            this.bunifuDropdown1.TabIndex = 25;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(1471, 101);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(192, 29);
+            this.bunifuCustomLabel1.TabIndex = 26;
+            this.bunifuCustomLabel1.Text = "Gideceğiniz yer :";
             // 
             // TitanicTrain
             // 
@@ -411,8 +445,8 @@
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.pnlList.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlSurvived.ResumeLayout(false);
+            this.pnlNotSurvived.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -439,9 +473,11 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblItemCount;
         private Bunifu.Framework.UI.BunifuCustomLabel lblDataCount;
         private Bunifu.Framework.UI.BunifuThinButton2 btnStartTrain;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlNotSurvived;
         private System.Windows.Forms.ListBox itemListNotSurvived;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlSurvived;
         private System.Windows.Forms.ListBox itemListSurvived;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
