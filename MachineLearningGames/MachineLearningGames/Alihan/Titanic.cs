@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MachineLearningGames.Alihan.Tabs;
 
 namespace MachineLearningGames.Alihan
 {
@@ -57,6 +58,13 @@ namespace MachineLearningGames.Alihan
         private void btnTest_MouseLeave(object sender, EventArgs e)
         {
             btnTest.LabelText = "";
+        }
+
+        private void btnTrain_Click(object sender, EventArgs e)
+        {
+            pnlMain.Controls.Clear();
+            TitanicTrain train = new TitanicTrain();
+            pnlMain.Controls.Add(train);
         }
     }
 }

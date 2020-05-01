@@ -66,6 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alihan\Tabs\TitanicTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alihan\Tabs\TitanicTest.Designer.cs">
+      <DependentUpon>TitanicTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alihan\Tabs\TitanicTrain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alihan\Tabs\TitanicTrain.Designer.cs">
+      <DependentUpon>TitanicTrain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alihan\Titanic.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +141,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Alihan\Tabs\TitanicTrain.resx">
+      <DependentUpon>TitanicTrain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alihan\Titanic.resx">
       <DependentUpon>Titanic.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,5 +16,16 @@ namespace MachineLearningGames.Alihan.Tabs
         {
             InitializeComponent();
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            itemList.Items.Add("Bilet Sınıfı : " + drpTicketClass.selectedValue +
+                               "  Cinsiyet : " + drpGender.selectedValue +
+                               "  Yaş : " + txtAge.text +
+                               "  Kardeş ya da eş sayısı : " + txtSiblingsOrSpouse.text +
+                               "  Ebeveyn ya da çocuk sayısı : " + txtParentOrChildren.text +
+                               "  Bilet ücreti : " + txtTickerFare.text +
+                               "  Gideceğiniz yer : " + drpEmbarked.selectedValue);
+        }
     }
 }

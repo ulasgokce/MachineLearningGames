@@ -132,6 +132,7 @@
             this.btnTrain.Name = "btnTrain";
             this.btnTrain.Size = new System.Drawing.Size(116, 111);
             this.btnTrain.TabIndex = 1;
+            this.btnTrain.Click += new System.EventHandler(this.btnTrain_Click);
             this.btnTrain.MouseLeave += new System.EventHandler(this.btnTrain_MouseLeave);
             this.btnTrain.MouseHover += new System.EventHandler(this.btnTrain_MouseHover);
             // 
