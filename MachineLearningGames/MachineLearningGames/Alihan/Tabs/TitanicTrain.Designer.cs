@@ -35,7 +35,6 @@
             this.lblDataCount = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnAdd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlList = new System.Windows.Forms.Panel();
-            this.itemList = new System.Windows.Forms.ListBox();
             this.txtTickerFare = new Bunifu.Framework.UI.BunifuTextbox();
             this.txtAge = new Bunifu.Framework.UI.BunifuTextbox();
             this.drpEmbarked = new Bunifu.Framework.UI.BunifuDropdown();
@@ -50,8 +49,14 @@
             this.lblAge = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGender = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTicketClass = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.itemListSurvived = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.itemListNotSurvived = new System.Windows.Forms.ListBox();
             this.panel.SuspendLayout();
             this.pnlList.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -158,24 +163,13 @@
             // 
             // pnlList
             // 
-            this.pnlList.Controls.Add(this.itemList);
+            this.pnlList.Controls.Add(this.panel2);
+            this.pnlList.Controls.Add(this.panel1);
             this.pnlList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlList.Location = new System.Drawing.Point(0, 266);
             this.pnlList.Name = "pnlList";
             this.pnlList.Size = new System.Drawing.Size(2000, 479);
             this.pnlList.TabIndex = 21;
-            // 
-            // itemList
-            // 
-            this.itemList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.itemList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.itemList.FormattingEnabled = true;
-            this.itemList.ItemHeight = 29;
-            this.itemList.Location = new System.Drawing.Point(0, 0);
-            this.itemList.Name = "itemList";
-            this.itemList.Size = new System.Drawing.Size(2000, 479);
-            this.itemList.TabIndex = 0;
             // 
             // txtTickerFare
             // 
@@ -365,6 +359,48 @@
             this.lblTicketClass.TabIndex = 1;
             this.lblTicketClass.Text = "Bilet Sınıfı :";
             // 
+            // itemListSurvived
+            // 
+            this.itemListSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemListSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemListSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.itemListSurvived.FormattingEnabled = true;
+            this.itemListSurvived.ItemHeight = 18;
+            this.itemListSurvived.Location = new System.Drawing.Point(0, 0);
+            this.itemListSurvived.Name = "itemListSurvived";
+            this.itemListSurvived.Size = new System.Drawing.Size(1000, 479);
+            this.itemListSurvived.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.itemListSurvived);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 479);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.itemListNotSurvived);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1000, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 479);
+            this.panel2.TabIndex = 1;
+            // 
+            // itemListNotSurvived
+            // 
+            this.itemListNotSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemListNotSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemListNotSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.itemListNotSurvived.FormattingEnabled = true;
+            this.itemListNotSurvived.ItemHeight = 18;
+            this.itemListNotSurvived.Location = new System.Drawing.Point(0, 0);
+            this.itemListNotSurvived.Name = "itemListNotSurvived";
+            this.itemListNotSurvived.Size = new System.Drawing.Size(1000, 479);
+            this.itemListNotSurvived.TabIndex = 1;
+            // 
             // TitanicTrain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -375,6 +411,8 @@
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.pnlList.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -398,9 +436,12 @@
         private System.Windows.Forms.Panel pnlList;
         private Bunifu.Framework.UI.BunifuTextbox txtTickerFare;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAdd;
-        private System.Windows.Forms.ListBox itemList;
         private Bunifu.Framework.UI.BunifuCustomLabel lblItemCount;
         private Bunifu.Framework.UI.BunifuCustomLabel lblDataCount;
         private Bunifu.Framework.UI.BunifuThinButton2 btnStartTrain;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ListBox itemListNotSurvived;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox itemListSurvived;
     }
 }
