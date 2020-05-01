@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitanicTrain));
-            this.pnlList = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
+            this.btnStartTrain = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lblItemCount = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblDataCount = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnAdd = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlList = new System.Windows.Forms.Panel();
+            this.itemList = new System.Windows.Forms.ListBox();
             this.txtTickerFare = new Bunifu.Framework.UI.BunifuTextbox();
             this.txtAge = new Bunifu.Framework.UI.BunifuTextbox();
             this.drpEmbarked = new Bunifu.Framework.UI.BunifuDropdown();
@@ -46,37 +50,85 @@
             this.lblAge = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGender = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTicketClass = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.itemList = new System.Windows.Forms.ListBox();
+            this.panel.SuspendLayout();
             this.pnlList.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlList
+            // panel
             // 
-            this.pnlList.BackColor = System.Drawing.Color.Transparent;
-            this.pnlList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlList.BackgroundImage")));
-            this.pnlList.Controls.Add(this.btnAdd);
-            this.pnlList.Controls.Add(this.panel2);
-            this.pnlList.Controls.Add(this.txtTickerFare);
-            this.pnlList.Controls.Add(this.txtAge);
-            this.pnlList.Controls.Add(this.drpEmbarked);
-            this.pnlList.Controls.Add(this.drpGender);
-            this.pnlList.Controls.Add(this.drpTicketClass);
-            this.pnlList.Controls.Add(this.lblEmbarked);
-            this.pnlList.Controls.Add(this.lblTicketFare);
-            this.pnlList.Controls.Add(this.lblParentOrChildren);
-            this.pnlList.Controls.Add(this.txtParentOrChildren);
-            this.pnlList.Controls.Add(this.lblSiblingsOrSpouse);
-            this.pnlList.Controls.Add(this.txtSiblingsOrSpouse);
-            this.pnlList.Controls.Add(this.lblAge);
-            this.pnlList.Controls.Add(this.lblGender);
-            this.pnlList.Controls.Add(this.lblTicketClass);
-            this.pnlList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlList.ForeColor = System.Drawing.Color.Coral;
-            this.pnlList.Location = new System.Drawing.Point(0, 0);
-            this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(2000, 745);
-            this.pnlList.TabIndex = 0;
+            this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.Controls.Add(this.btnStartTrain);
+            this.panel.Controls.Add(this.lblItemCount);
+            this.panel.Controls.Add(this.lblDataCount);
+            this.panel.Controls.Add(this.btnAdd);
+            this.panel.Controls.Add(this.pnlList);
+            this.panel.Controls.Add(this.txtTickerFare);
+            this.panel.Controls.Add(this.txtAge);
+            this.panel.Controls.Add(this.drpEmbarked);
+            this.panel.Controls.Add(this.drpGender);
+            this.panel.Controls.Add(this.drpTicketClass);
+            this.panel.Controls.Add(this.lblEmbarked);
+            this.panel.Controls.Add(this.lblTicketFare);
+            this.panel.Controls.Add(this.lblParentOrChildren);
+            this.panel.Controls.Add(this.txtParentOrChildren);
+            this.panel.Controls.Add(this.lblSiblingsOrSpouse);
+            this.panel.Controls.Add(this.txtSiblingsOrSpouse);
+            this.panel.Controls.Add(this.lblAge);
+            this.panel.Controls.Add(this.lblGender);
+            this.panel.Controls.Add(this.lblTicketClass);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.ForeColor = System.Drawing.Color.Coral;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(2000, 745);
+            this.panel.TabIndex = 0;
+            // 
+            // btnStartTrain
+            // 
+            this.btnStartTrain.ActiveBorderThickness = 1;
+            this.btnStartTrain.ActiveCornerRadius = 20;
+            this.btnStartTrain.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnStartTrain.ActiveForecolor = System.Drawing.Color.White;
+            this.btnStartTrain.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnStartTrain.BackColor = System.Drawing.Color.Transparent;
+            this.btnStartTrain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStartTrain.BackgroundImage")));
+            this.btnStartTrain.ButtonText = "EĞİTİMİ BAŞLAT";
+            this.btnStartTrain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStartTrain.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartTrain.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnStartTrain.IdleBorderThickness = 1;
+            this.btnStartTrain.IdleCornerRadius = 20;
+            this.btnStartTrain.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnStartTrain.IdleForecolor = System.Drawing.Color.Orange;
+            this.btnStartTrain.IdleLineColor = System.Drawing.Color.Orange;
+            this.btnStartTrain.Location = new System.Drawing.Point(1560, 191);
+            this.btnStartTrain.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStartTrain.Name = "btnStartTrain";
+            this.btnStartTrain.Size = new System.Drawing.Size(319, 67);
+            this.btnStartTrain.TabIndex = 9;
+            this.btnStartTrain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStartTrain.Click += new System.EventHandler(this.btnStartTrain_Click);
+            // 
+            // lblItemCount
+            // 
+            this.lblItemCount.AutoSize = true;
+            this.lblItemCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblItemCount.Location = new System.Drawing.Point(156, 226);
+            this.lblItemCount.Name = "lblItemCount";
+            this.lblItemCount.Size = new System.Drawing.Size(31, 32);
+            this.lblItemCount.TabIndex = 24;
+            this.lblItemCount.Text = "0";
+            // 
+            // lblDataCount
+            // 
+            this.lblDataCount.AutoSize = true;
+            this.lblDataCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDataCount.Location = new System.Drawing.Point(3, 226);
+            this.lblDataCount.Name = "lblDataCount";
+            this.lblDataCount.Size = new System.Drawing.Size(160, 32);
+            this.lblDataCount.TabIndex = 23;
+            this.lblDataCount.Text = "Veri sayısı :";
             // 
             // btnAdd
             // 
@@ -100,22 +152,35 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(319, 67);
-            this.btnAdd.TabIndex = 22;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdd.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // panel2
+            // pnlList
             // 
-            this.panel2.Controls.Add(this.itemList);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 294);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2000, 451);
-            this.panel2.TabIndex = 21;
+            this.pnlList.Controls.Add(this.itemList);
+            this.pnlList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlList.Location = new System.Drawing.Point(0, 266);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Size = new System.Drawing.Size(2000, 479);
+            this.pnlList.TabIndex = 21;
+            // 
+            // itemList
+            // 
+            this.itemList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.itemList.FormattingEnabled = true;
+            this.itemList.ItemHeight = 29;
+            this.itemList.Location = new System.Drawing.Point(0, 0);
+            this.itemList.Name = "itemList";
+            this.itemList.Size = new System.Drawing.Size(2000, 479);
+            this.itemList.TabIndex = 0;
             // 
             // txtTickerFare
             // 
             this.txtTickerFare.BackColor = System.Drawing.Color.Silver;
+            this.txtTickerFare.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTickerFare.BackgroundImage")));
             this.txtTickerFare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtTickerFare.ForeColor = System.Drawing.Color.Black;
             this.txtTickerFare.Icon = ((System.Drawing.Image)(resources.GetObject("txtTickerFare.Icon")));
@@ -123,12 +188,13 @@
             this.txtTickerFare.Margin = new System.Windows.Forms.Padding(10);
             this.txtTickerFare.Name = "txtTickerFare";
             this.txtTickerFare.Size = new System.Drawing.Size(282, 43);
-            this.txtTickerFare.TabIndex = 20;
+            this.txtTickerFare.TabIndex = 6;
             this.txtTickerFare.text = "";
             // 
             // txtAge
             // 
             this.txtAge.BackColor = System.Drawing.Color.Silver;
+            this.txtAge.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtAge.BackgroundImage")));
             this.txtAge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtAge.ForeColor = System.Drawing.Color.Black;
             this.txtAge.Icon = ((System.Drawing.Image)(resources.GetObject("txtAge.Icon")));
@@ -136,7 +202,7 @@
             this.txtAge.Margin = new System.Windows.Forms.Padding(10);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(282, 43);
-            this.txtAge.TabIndex = 19;
+            this.txtAge.TabIndex = 3;
             this.txtAge.text = "";
             // 
             // drpEmbarked
@@ -152,13 +218,13 @@
         "Southampton (England)",
         "Queenstown (Ireland)"};
             this.drpEmbarked.Location = new System.Drawing.Point(1666, 42);
-            this.drpEmbarked.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drpEmbarked.Margin = new System.Windows.Forms.Padding(4);
             this.drpEmbarked.Name = "drpEmbarked";
             this.drpEmbarked.NomalColor = System.Drawing.Color.Silver;
             this.drpEmbarked.onHoverColor = System.Drawing.Color.White;
-            this.drpEmbarked.selectedIndex = -1;
+            this.drpEmbarked.selectedIndex = 0;
             this.drpEmbarked.Size = new System.Drawing.Size(282, 43);
-            this.drpEmbarked.TabIndex = 18;
+            this.drpEmbarked.TabIndex = 7;
             // 
             // drpGender
             // 
@@ -172,13 +238,13 @@
         "Erkek",
         "Kadın"};
             this.drpGender.Location = new System.Drawing.Point(204, 87);
-            this.drpGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drpGender.Margin = new System.Windows.Forms.Padding(4);
             this.drpGender.Name = "drpGender";
             this.drpGender.NomalColor = System.Drawing.Color.Silver;
             this.drpGender.onHoverColor = System.Drawing.Color.White;
-            this.drpGender.selectedIndex = -1;
+            this.drpGender.selectedIndex = 0;
             this.drpGender.Size = new System.Drawing.Size(282, 43);
-            this.drpGender.TabIndex = 17;
+            this.drpGender.TabIndex = 2;
             // 
             // drpTicketClass
             // 
@@ -193,13 +259,13 @@
         "2",
         "3"};
             this.drpTicketClass.Location = new System.Drawing.Point(204, 36);
-            this.drpTicketClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drpTicketClass.Margin = new System.Windows.Forms.Padding(4);
             this.drpTicketClass.Name = "drpTicketClass";
             this.drpTicketClass.NomalColor = System.Drawing.Color.Silver;
             this.drpTicketClass.onHoverColor = System.Drawing.Color.White;
-            this.drpTicketClass.selectedIndex = -1;
+            this.drpTicketClass.selectedIndex = 0;
             this.drpTicketClass.Size = new System.Drawing.Size(282, 43);
-            this.drpTicketClass.TabIndex = 16;
+            this.drpTicketClass.TabIndex = 1;
             // 
             // lblEmbarked
             // 
@@ -234,6 +300,7 @@
             // txtParentOrChildren
             // 
             this.txtParentOrChildren.BackColor = System.Drawing.Color.Silver;
+            this.txtParentOrChildren.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtParentOrChildren.BackgroundImage")));
             this.txtParentOrChildren.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtParentOrChildren.ForeColor = System.Drawing.Color.Black;
             this.txtParentOrChildren.Icon = ((System.Drawing.Image)(resources.GetObject("txtParentOrChildren.Icon")));
@@ -241,7 +308,7 @@
             this.txtParentOrChildren.Margin = new System.Windows.Forms.Padding(10);
             this.txtParentOrChildren.Name = "txtParentOrChildren";
             this.txtParentOrChildren.Size = new System.Drawing.Size(282, 43);
-            this.txtParentOrChildren.TabIndex = 8;
+            this.txtParentOrChildren.TabIndex = 5;
             this.txtParentOrChildren.text = "";
             // 
             // lblSiblingsOrSpouse
@@ -257,6 +324,7 @@
             // txtSiblingsOrSpouse
             // 
             this.txtSiblingsOrSpouse.BackColor = System.Drawing.Color.Silver;
+            this.txtSiblingsOrSpouse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSiblingsOrSpouse.BackgroundImage")));
             this.txtSiblingsOrSpouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtSiblingsOrSpouse.ForeColor = System.Drawing.Color.Black;
             this.txtSiblingsOrSpouse.Icon = ((System.Drawing.Image)(resources.GetObject("txtSiblingsOrSpouse.Icon")));
@@ -264,7 +332,7 @@
             this.txtSiblingsOrSpouse.Margin = new System.Windows.Forms.Padding(10);
             this.txtSiblingsOrSpouse.Name = "txtSiblingsOrSpouse";
             this.txtSiblingsOrSpouse.Size = new System.Drawing.Size(282, 43);
-            this.txtSiblingsOrSpouse.TabIndex = 6;
+            this.txtSiblingsOrSpouse.TabIndex = 4;
             this.txtSiblingsOrSpouse.text = "";
             // 
             // lblAge
@@ -297,35 +365,23 @@
             this.lblTicketClass.TabIndex = 1;
             this.lblTicketClass.Text = "Bilet Sınıfı :";
             // 
-            // itemList
-            // 
-            this.itemList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.itemList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.itemList.FormattingEnabled = true;
-            this.itemList.ItemHeight = 29;
-            this.itemList.Location = new System.Drawing.Point(0, 0);
-            this.itemList.Name = "itemList";
-            this.itemList.Size = new System.Drawing.Size(2000, 451);
-            this.itemList.TabIndex = 0;
-            // 
             // TitanicTrain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlList);
+            this.Controls.Add(this.panel);
             this.Name = "TitanicTrain";
             this.Size = new System.Drawing.Size(2000, 745);
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.pnlList.ResumeLayout(false);
-            this.pnlList.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlList;
+        private System.Windows.Forms.Panel panel;
         private Bunifu.Framework.UI.BunifuCustomLabel lblAge;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGender;
         private Bunifu.Framework.UI.BunifuCustomLabel lblTicketClass;
@@ -339,9 +395,12 @@
         private Bunifu.Framework.UI.BunifuDropdown drpGender;
         private Bunifu.Framework.UI.BunifuDropdown drpTicketClass;
         private Bunifu.Framework.UI.BunifuTextbox txtAge;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlList;
         private Bunifu.Framework.UI.BunifuTextbox txtTickerFare;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAdd;
         private System.Windows.Forms.ListBox itemList;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblItemCount;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblDataCount;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnStartTrain;
     }
 }
