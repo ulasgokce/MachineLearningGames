@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MachineLearningGames.Alihan.Entity;
@@ -25,12 +26,51 @@ namespace MachineLearningGames.Alihan.Tabs
 
         private void btnStartTrain_Click(object sender, EventArgs e)
         {
-            if (_itemSurvivedCount < 15)
-                MessageBox.Show(
-                    "Girmiş olduğunuz hayatta kalan veri sayısı yeterli değil!\nLütfen faha fazla veri giriniz");
-            else if (_itemNotSurvivedCount < 15)
-                MessageBox.Show(
-                    "Girmiş olduğunuz hayatta kalamayan veri sayısı yeterli değil!\nLütfen faha fazla veri giriniz");
+            //if (_itemSurvivedCount < 1)
+            //    MessageBox.Show(
+            //        "Girmiş olduğunuz hayatta kalan veri sayısı yeterli değil!\nLütfen faha fazla veri giriniz");
+            //else if (_itemNotSurvivedCount < 1)
+            //    MessageBox.Show(
+            //        "Girmiş olduğunuz hayatta kalamayan veri sayısı yeterli değil!\nLütfen faha fazla veri giriniz");
+            //else
+            //{
+            pnlList.Visible = false;
+            prgsState.Visible = true;
+
+            while (prgsState.Value != 100)
+            {
+                prgsState.Value = ProgressBarIncreasing();
+                lblCounter.Text = prgsState.Value.ToString();
+                if (_progresscounter == 99)
+                {
+                    Thread.Sleep(1000);
+                    prgsState.Value = 100;
+                    lblCounter.Text = "100";
+                    lblModeTraining.Text = "Eğitim Tamamlandı!";
+                }
+
+            }
+
+
+            // }
+
+        }
+
+        private int _progresscounter = 0;
+        private int ProgressBarIncreasing()
+        {
+            if (_progresscounter < 80)
+            {
+                Random random = new Random();
+                _progresscounter += random.Next(1, 20);
+            }
+            else
+            {
+                _progresscounter += 99 - _progresscounter;
+            }
+            Thread.Sleep(1000);
+            return _progresscounter;
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -90,14 +130,16 @@ namespace MachineLearningGames.Alihan.Tabs
 
         private void DataClear()
         {
-            txtAge.text = "";
-            txtTickerFare.text = "";
-            txtParentOrChildren.text = "";
-            txtSiblingsOrSpouse.text = "";
+            txtAge.text = "0";
+            txtTickerFare.text = "0";
+            txtParentOrChildren.text = "0";
+            txtSiblingsOrSpouse.text = "0";
             drpState.selectedIndex = 0;
             drpTicketClass.selectedIndex = 0;
             drpEmbarked.selectedIndex = 0;
             drpGender.selectedIndex = 0;
         }
+
+
     }
 }

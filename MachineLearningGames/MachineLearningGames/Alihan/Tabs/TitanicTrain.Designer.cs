@@ -30,11 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitanicTrain));
             this.panel = new System.Windows.Forms.Panel();
+            this.lblModeTraining = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblCounter = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.prgsState = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.drpState = new Bunifu.Framework.UI.BunifuDropdown();
+            this.lblState = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnStartTrain = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblItemCount = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblDataCount = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnAdd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlList = new System.Windows.Forms.Panel();
+            this.pnlNotSurvived = new System.Windows.Forms.Panel();
+            this.itemListNotSurvived = new System.Windows.Forms.ListBox();
+            this.pnlSurvived = new System.Windows.Forms.Panel();
+            this.itemListSurvived = new System.Windows.Forms.ListBox();
             this.txtTickerFare = new Bunifu.Framework.UI.BunifuTextbox();
             this.txtAge = new Bunifu.Framework.UI.BunifuTextbox();
             this.drpEmbarked = new Bunifu.Framework.UI.BunifuDropdown();
@@ -49,24 +61,24 @@
             this.lblAge = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGender = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTicketClass = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.itemListSurvived = new System.Windows.Forms.ListBox();
-            this.pnlSurvived = new System.Windows.Forms.Panel();
-            this.pnlNotSurvived = new System.Windows.Forms.Panel();
-            this.itemListNotSurvived = new System.Windows.Forms.ListBox();
-            this.drpState = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel.SuspendLayout();
             this.pnlList.SuspendLayout();
-            this.pnlSurvived.SuspendLayout();
             this.pnlNotSurvived.SuspendLayout();
+            this.pnlSurvived.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
-            this.panel.Controls.Add(this.drpState);
+            this.panel.Controls.Add(this.lblModeTraining);
+            this.panel.Controls.Add(this.bunifuCustomLabel4);
+            this.panel.Controls.Add(this.lblCounter);
+            this.panel.Controls.Add(this.bunifuCustomLabel2);
             this.panel.Controls.Add(this.bunifuCustomLabel1);
+            this.panel.Controls.Add(this.prgsState);
+            this.panel.Controls.Add(this.drpState);
+            this.panel.Controls.Add(this.lblState);
             this.panel.Controls.Add(this.btnStartTrain);
             this.panel.Controls.Add(this.lblItemCount);
             this.panel.Controls.Add(this.lblDataCount);
@@ -92,6 +104,105 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(2000, 745);
             this.panel.TabIndex = 0;
+            // 
+            // lblModeTraining
+            // 
+            this.lblModeTraining.AutoSize = true;
+            this.lblModeTraining.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblModeTraining.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblModeTraining.Location = new System.Drawing.Point(816, 315);
+            this.lblModeTraining.Name = "lblModeTraining";
+            this.lblModeTraining.Size = new System.Drawing.Size(158, 25);
+            this.lblModeTraining.TabIndex = 33;
+            this.lblModeTraining.Text = "Model Eğitiliyor...";
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Aqua;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(1366, 279);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(40, 32);
+            this.bunifuCustomLabel4.TabIndex = 32;
+            this.bunifuCustomLabel4.Text = "%";
+            // 
+            // lblCounter
+            // 
+            this.lblCounter.AutoSize = true;
+            this.lblCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCounter.ForeColor = System.Drawing.Color.Aqua;
+            this.lblCounter.Location = new System.Drawing.Point(1336, 279);
+            this.lblCounter.Name = "lblCounter";
+            this.lblCounter.Size = new System.Drawing.Size(31, 32);
+            this.lblCounter.TabIndex = 31;
+            this.lblCounter.Text = "0";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(1417, 338);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(295, 32);
+            this.bunifuCustomLabel2.TabIndex = 30;
+            this.bunifuCustomLabel2.Text = "Hayatta Kalamayanlar";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(367, 338);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(226, 32);
+            this.bunifuCustomLabel1.TabIndex = 29;
+            this.bunifuCustomLabel1.Text = "Hayatta Kalanlar";
+            // 
+            // prgsState
+            // 
+            this.prgsState.BackColor = System.Drawing.Color.Silver;
+            this.prgsState.BorderRadius = 5;
+            this.prgsState.Location = new System.Drawing.Point(529, 271);
+            this.prgsState.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prgsState.MaximumValue = 100;
+            this.prgsState.Name = "prgsState";
+            this.prgsState.ProgressColor = System.Drawing.Color.Teal;
+            this.prgsState.Size = new System.Drawing.Size(791, 40);
+            this.prgsState.TabIndex = 28;
+            this.prgsState.Value = 0;
+            this.prgsState.Visible = false;
+            // 
+            // drpState
+            // 
+            this.drpState.BackColor = System.Drawing.Color.Transparent;
+            this.drpState.BorderRadius = 3;
+            this.drpState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.drpState.DisabledColor = System.Drawing.Color.Gray;
+            this.drpState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.drpState.ForeColor = System.Drawing.Color.Black;
+            this.drpState.Items = new string[] {
+        "Hayatta kaldı",
+        "Hayatta kalamadı"};
+            this.drpState.Location = new System.Drawing.Point(1666, 93);
+            this.drpState.Margin = new System.Windows.Forms.Padding(4);
+            this.drpState.Name = "drpState";
+            this.drpState.NomalColor = System.Drawing.Color.Silver;
+            this.drpState.onHoverColor = System.Drawing.Color.White;
+            this.drpState.selectedIndex = 0;
+            this.drpState.Size = new System.Drawing.Size(282, 43);
+            this.drpState.TabIndex = 25;
+            // 
+            // lblState
+            // 
+            this.lblState.AutoSize = true;
+            this.lblState.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblState.Location = new System.Drawing.Point(1550, 101);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(109, 29);
+            this.lblState.TabIndex = 26;
+            this.lblState.Text = "Durumu :";
             // 
             // btnStartTrain
             // 
@@ -170,10 +281,52 @@
             this.pnlList.Controls.Add(this.pnlNotSurvived);
             this.pnlList.Controls.Add(this.pnlSurvived);
             this.pnlList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlList.Location = new System.Drawing.Point(0, 336);
+            this.pnlList.Location = new System.Drawing.Point(0, 373);
             this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(2000, 409);
+            this.pnlList.Size = new System.Drawing.Size(2000, 372);
             this.pnlList.TabIndex = 21;
+            // 
+            // pnlNotSurvived
+            // 
+            this.pnlNotSurvived.Controls.Add(this.itemListNotSurvived);
+            this.pnlNotSurvived.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlNotSurvived.Location = new System.Drawing.Point(1000, 0);
+            this.pnlNotSurvived.Name = "pnlNotSurvived";
+            this.pnlNotSurvived.Size = new System.Drawing.Size(1000, 372);
+            this.pnlNotSurvived.TabIndex = 1;
+            // 
+            // itemListNotSurvived
+            // 
+            this.itemListNotSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemListNotSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemListNotSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.itemListNotSurvived.FormattingEnabled = true;
+            this.itemListNotSurvived.ItemHeight = 18;
+            this.itemListNotSurvived.Location = new System.Drawing.Point(0, 0);
+            this.itemListNotSurvived.Name = "itemListNotSurvived";
+            this.itemListNotSurvived.Size = new System.Drawing.Size(1000, 372);
+            this.itemListNotSurvived.TabIndex = 1;
+            // 
+            // pnlSurvived
+            // 
+            this.pnlSurvived.Controls.Add(this.itemListSurvived);
+            this.pnlSurvived.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSurvived.Location = new System.Drawing.Point(0, 0);
+            this.pnlSurvived.Name = "pnlSurvived";
+            this.pnlSurvived.Size = new System.Drawing.Size(1000, 372);
+            this.pnlSurvived.TabIndex = 0;
+            // 
+            // itemListSurvived
+            // 
+            this.itemListSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemListSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemListSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.itemListSurvived.FormattingEnabled = true;
+            this.itemListSurvived.ItemHeight = 18;
+            this.itemListSurvived.Location = new System.Drawing.Point(0, 0);
+            this.itemListSurvived.Name = "itemListSurvived";
+            this.itemListSurvived.Size = new System.Drawing.Size(1000, 372);
+            this.itemListSurvived.TabIndex = 0;
             // 
             // txtTickerFare
             // 
@@ -187,7 +340,7 @@
             this.txtTickerFare.Name = "txtTickerFare";
             this.txtTickerFare.Size = new System.Drawing.Size(282, 43);
             this.txtTickerFare.TabIndex = 6;
-            this.txtTickerFare.text = "";
+            this.txtTickerFare.text = "0";
             // 
             // txtAge
             // 
@@ -201,7 +354,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(282, 43);
             this.txtAge.TabIndex = 3;
-            this.txtAge.text = "";
+            this.txtAge.text = "0";
             // 
             // drpEmbarked
             // 
@@ -307,7 +460,7 @@
             this.txtParentOrChildren.Name = "txtParentOrChildren";
             this.txtParentOrChildren.Size = new System.Drawing.Size(282, 43);
             this.txtParentOrChildren.TabIndex = 5;
-            this.txtParentOrChildren.text = "";
+            this.txtParentOrChildren.text = "0";
             // 
             // lblSiblingsOrSpouse
             // 
@@ -331,7 +484,7 @@
             this.txtSiblingsOrSpouse.Name = "txtSiblingsOrSpouse";
             this.txtSiblingsOrSpouse.Size = new System.Drawing.Size(282, 43);
             this.txtSiblingsOrSpouse.TabIndex = 4;
-            this.txtSiblingsOrSpouse.text = "";
+            this.txtSiblingsOrSpouse.text = "0";
             // 
             // lblAge
             // 
@@ -363,78 +516,6 @@
             this.lblTicketClass.TabIndex = 1;
             this.lblTicketClass.Text = "Bilet Sınıfı :";
             // 
-            // itemListSurvived
-            // 
-            this.itemListSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.itemListSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemListSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.itemListSurvived.FormattingEnabled = true;
-            this.itemListSurvived.ItemHeight = 18;
-            this.itemListSurvived.Location = new System.Drawing.Point(0, 0);
-            this.itemListSurvived.Name = "itemListSurvived";
-            this.itemListSurvived.Size = new System.Drawing.Size(1000, 409);
-            this.itemListSurvived.TabIndex = 0;
-            // 
-            // pnlSurvived
-            // 
-            this.pnlSurvived.Controls.Add(this.itemListSurvived);
-            this.pnlSurvived.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSurvived.Location = new System.Drawing.Point(0, 0);
-            this.pnlSurvived.Name = "pnlSurvived";
-            this.pnlSurvived.Size = new System.Drawing.Size(1000, 409);
-            this.pnlSurvived.TabIndex = 0;
-            // 
-            // pnlNotSurvived
-            // 
-            this.pnlNotSurvived.Controls.Add(this.itemListNotSurvived);
-            this.pnlNotSurvived.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNotSurvived.Location = new System.Drawing.Point(1000, 0);
-            this.pnlNotSurvived.Name = "pnlNotSurvived";
-            this.pnlNotSurvived.Size = new System.Drawing.Size(1000, 409);
-            this.pnlNotSurvived.TabIndex = 1;
-            // 
-            // itemListNotSurvived
-            // 
-            this.itemListNotSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.itemListNotSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemListNotSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.itemListNotSurvived.FormattingEnabled = true;
-            this.itemListNotSurvived.ItemHeight = 18;
-            this.itemListNotSurvived.Location = new System.Drawing.Point(0, 0);
-            this.itemListNotSurvived.Name = "itemListNotSurvived";
-            this.itemListNotSurvived.Size = new System.Drawing.Size(1000, 409);
-            this.itemListNotSurvived.TabIndex = 1;
-            // 
-            // drpState
-            // 
-            this.drpState.BackColor = System.Drawing.Color.Transparent;
-            this.drpState.BorderRadius = 3;
-            this.drpState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.drpState.DisabledColor = System.Drawing.Color.Gray;
-            this.drpState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.drpState.ForeColor = System.Drawing.Color.Black;
-            this.drpState.Items = new string[] {
-        "Hayatta kaldı",
-        "Hayatta kalamadı"};
-            this.drpState.Location = new System.Drawing.Point(1666, 93);
-            this.drpState.Margin = new System.Windows.Forms.Padding(4);
-            this.drpState.Name = "drpState";
-            this.drpState.NomalColor = System.Drawing.Color.Silver;
-            this.drpState.onHoverColor = System.Drawing.Color.White;
-            this.drpState.selectedIndex = 0;
-            this.drpState.Size = new System.Drawing.Size(282, 43);
-            this.drpState.TabIndex = 25;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(1471, 101);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(192, 29);
-            this.bunifuCustomLabel1.TabIndex = 26;
-            this.bunifuCustomLabel1.Text = "Gideceğiniz yer :";
-            // 
             // TitanicTrain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -445,8 +526,8 @@
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.pnlList.ResumeLayout(false);
-            this.pnlSurvived.ResumeLayout(false);
             this.pnlNotSurvived.ResumeLayout(false);
+            this.pnlSurvived.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -478,6 +559,12 @@
         private System.Windows.Forms.Panel pnlSurvived;
         private System.Windows.Forms.ListBox itemListSurvived;
         private Bunifu.Framework.UI.BunifuDropdown drpState;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblState;
+        private Bunifu.Framework.UI.BunifuProgressBar prgsState;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblModeTraining;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblCounter;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
