@@ -287,10 +287,11 @@
             // 
             // itemListNotSurvived
             // 
-            this.itemListNotSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemListNotSurvived.BackColor = System.Drawing.Color.Black;
             this.bunifuTransition1.SetDecoration(this.itemListNotSurvived, BunifuAnimatorNS.DecorationType.None);
             this.itemListNotSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemListNotSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.itemListNotSurvived.ForeColor = System.Drawing.Color.White;
             this.itemListNotSurvived.FormattingEnabled = true;
             this.itemListNotSurvived.ItemHeight = 18;
             this.itemListNotSurvived.Location = new System.Drawing.Point(0, 0);
@@ -310,10 +311,11 @@
             // 
             // itemListSurvived
             // 
-            this.itemListSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.itemListSurvived.BackColor = System.Drawing.Color.Black;
             this.bunifuTransition1.SetDecoration(this.itemListSurvived, BunifuAnimatorNS.DecorationType.None);
             this.itemListSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemListSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.itemListSurvived.ForeColor = System.Drawing.Color.White;
             this.itemListSurvived.FormattingEnabled = true;
             this.itemListSurvived.ItemHeight = 18;
             this.itemListSurvived.Location = new System.Drawing.Point(0, 0);
@@ -540,7 +542,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
