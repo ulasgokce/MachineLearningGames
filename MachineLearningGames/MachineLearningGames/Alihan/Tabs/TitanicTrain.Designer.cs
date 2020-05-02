@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitanicTrain));
             this.panel = new System.Windows.Forms.Panel();
             this.lblModeTraining = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblCounter = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblNotSurvived = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblSurvived = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.prgsState = new Bunifu.Framework.UI.BunifuProgressBar();
             this.drpState = new Bunifu.Framework.UI.BunifuDropdown();
             this.lblState = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -72,10 +70,8 @@
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
             this.panel.Controls.Add(this.lblModeTraining);
-            this.panel.Controls.Add(this.bunifuCustomLabel4);
-            this.panel.Controls.Add(this.lblCounter);
-            this.panel.Controls.Add(this.bunifuCustomLabel2);
-            this.panel.Controls.Add(this.bunifuCustomLabel1);
+            this.panel.Controls.Add(this.lblNotSurvived);
+            this.panel.Controls.Add(this.lblSurvived);
             this.panel.Controls.Add(this.prgsState);
             this.panel.Controls.Add(this.drpState);
             this.panel.Controls.Add(this.lblState);
@@ -116,49 +112,27 @@
             this.lblModeTraining.TabIndex = 33;
             this.lblModeTraining.Text = "Model Eğitiliyor...";
             // 
-            // bunifuCustomLabel4
+            // lblNotSurvived
             // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Aqua;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(1366, 279);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(40, 32);
-            this.bunifuCustomLabel4.TabIndex = 32;
-            this.bunifuCustomLabel4.Text = "%";
+            this.lblNotSurvived.AutoSize = true;
+            this.lblNotSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNotSurvived.ForeColor = System.Drawing.Color.Red;
+            this.lblNotSurvived.Location = new System.Drawing.Point(1417, 338);
+            this.lblNotSurvived.Name = "lblNotSurvived";
+            this.lblNotSurvived.Size = new System.Drawing.Size(295, 32);
+            this.lblNotSurvived.TabIndex = 30;
+            this.lblNotSurvived.Text = "Hayatta Kalamayanlar";
             // 
-            // lblCounter
+            // lblSurvived
             // 
-            this.lblCounter.AutoSize = true;
-            this.lblCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCounter.ForeColor = System.Drawing.Color.Aqua;
-            this.lblCounter.Location = new System.Drawing.Point(1336, 279);
-            this.lblCounter.Name = "lblCounter";
-            this.lblCounter.Size = new System.Drawing.Size(31, 32);
-            this.lblCounter.TabIndex = 31;
-            this.lblCounter.Text = "0";
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(1417, 338);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(295, 32);
-            this.bunifuCustomLabel2.TabIndex = 30;
-            this.bunifuCustomLabel2.Text = "Hayatta Kalamayanlar";
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(367, 338);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(226, 32);
-            this.bunifuCustomLabel1.TabIndex = 29;
-            this.bunifuCustomLabel1.Text = "Hayatta Kalanlar";
+            this.lblSurvived.AutoSize = true;
+            this.lblSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSurvived.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblSurvived.Location = new System.Drawing.Point(367, 338);
+            this.lblSurvived.Name = "lblSurvived";
+            this.lblSurvived.Size = new System.Drawing.Size(226, 32);
+            this.lblSurvived.TabIndex = 29;
+            this.lblSurvived.Text = "Hayatta Kalanlar";
             // 
             // prgsState
             // 
@@ -562,9 +536,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblState;
         private Bunifu.Framework.UI.BunifuProgressBar prgsState;
         private Bunifu.Framework.UI.BunifuCustomLabel lblModeTraining;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblCounter;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblNotSurvived;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblSurvived;
     }
 }

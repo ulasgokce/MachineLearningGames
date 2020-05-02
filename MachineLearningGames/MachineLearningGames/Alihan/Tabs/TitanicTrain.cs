@@ -36,17 +36,23 @@ namespace MachineLearningGames.Alihan.Tabs
             //{
             pnlList.Visible = false;
             prgsState.Visible = true;
+            btnAdd.Visible = false;
+            btnStartTrain.Visible = false;
+            lblItemCount.Visible = false;
+            lblDataCount.Visible = false;
+            lblSurvived.Visible = false;
+            lblNotSurvived.Visible = false;
 
             while (prgsState.Value != 100)
             {
                 prgsState.Value = ProgressBarIncreasing();
-                lblCounter.Text = prgsState.Value.ToString();
+
                 if (_progresscounter == 99)
                 {
                     Thread.Sleep(1000);
                     prgsState.Value = 100;
-                    lblCounter.Text = "100";
                     lblModeTraining.Text = "Eğitim Tamamlandı!";
+                    MessageBox.Show("Eğitim Tamamlandı!\nArtık Test Edebilirisiniz.");
                 }
 
             }
@@ -59,16 +65,17 @@ namespace MachineLearningGames.Alihan.Tabs
         private int _progresscounter = 0;
         private int ProgressBarIncreasing()
         {
+            Random random = new Random();
+
             if (_progresscounter < 80)
             {
-                Random random = new Random();
                 _progresscounter += random.Next(1, 20);
             }
             else
             {
                 _progresscounter += 99 - _progresscounter;
             }
-            Thread.Sleep(1000);
+            Thread.Sleep(random.Next(1000, 5000));
             return _progresscounter;
 
         }
