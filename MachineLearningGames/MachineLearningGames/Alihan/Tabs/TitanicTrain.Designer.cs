@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitanicTrain));
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblModeTraining = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblNotSurvived = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblSurvived = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -59,13 +61,13 @@
             this.lblAge = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGender = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTicketClass = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlList.SuspendLayout();
             this.pnlNotSurvived.SuspendLayout();
             this.pnlSurvived.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -97,6 +99,7 @@
             this.pnlMain.Controls.Add(this.lblAge);
             this.pnlMain.Controls.Add(this.lblGender);
             this.pnlMain.Controls.Add(this.lblTicketClass);
+            this.bunifuTransition1.SetDecoration(this.pnlMain, BunifuAnimatorNS.DecorationType.None);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.ForeColor = System.Drawing.Color.Coral;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
@@ -104,9 +107,22 @@
             this.pnlMain.Size = new System.Drawing.Size(2000, 745);
             this.pnlMain.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.bunifuTransition1.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(776, 244);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(445, 169);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 35;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
             // lblModeTraining
             // 
             this.lblModeTraining.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblModeTraining, BunifuAnimatorNS.DecorationType.None);
             this.lblModeTraining.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblModeTraining.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblModeTraining.Location = new System.Drawing.Point(917, 411);
@@ -119,6 +135,7 @@
             // lblNotSurvived
             // 
             this.lblNotSurvived.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblNotSurvived, BunifuAnimatorNS.DecorationType.None);
             this.lblNotSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblNotSurvived.ForeColor = System.Drawing.Color.Red;
             this.lblNotSurvived.Location = new System.Drawing.Point(1417, 338);
@@ -130,6 +147,7 @@
             // lblSurvived
             // 
             this.lblSurvived.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblSurvived, BunifuAnimatorNS.DecorationType.None);
             this.lblSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSurvived.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblSurvived.Location = new System.Drawing.Point(367, 338);
@@ -143,6 +161,7 @@
             this.drpState.BackColor = System.Drawing.Color.Transparent;
             this.drpState.BorderRadius = 3;
             this.drpState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuTransition1.SetDecoration(this.drpState, BunifuAnimatorNS.DecorationType.None);
             this.drpState.DisabledColor = System.Drawing.Color.Gray;
             this.drpState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.drpState.ForeColor = System.Drawing.Color.Black;
@@ -161,6 +180,7 @@
             // lblState
             // 
             this.lblState.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblState, BunifuAnimatorNS.DecorationType.None);
             this.lblState.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblState.Location = new System.Drawing.Point(1550, 101);
             this.lblState.Name = "lblState";
@@ -179,6 +199,7 @@
             this.btnStartTrain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStartTrain.BackgroundImage")));
             this.btnStartTrain.ButtonText = "EĞİTİMİ BAŞLAT";
             this.btnStartTrain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnStartTrain, BunifuAnimatorNS.DecorationType.None);
             this.btnStartTrain.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStartTrain.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnStartTrain.IdleBorderThickness = 1;
@@ -197,6 +218,7 @@
             // lblItemCount
             // 
             this.lblItemCount.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblItemCount, BunifuAnimatorNS.DecorationType.None);
             this.lblItemCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblItemCount.Location = new System.Drawing.Point(180, 279);
             this.lblItemCount.Name = "lblItemCount";
@@ -207,6 +229,7 @@
             // lblDataCount
             // 
             this.lblDataCount.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblDataCount, BunifuAnimatorNS.DecorationType.None);
             this.lblDataCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDataCount.Location = new System.Drawing.Point(27, 279);
             this.lblDataCount.Name = "lblDataCount";
@@ -225,6 +248,7 @@
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.ButtonText = "EKLE";
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnAdd, BunifuAnimatorNS.DecorationType.None);
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnAdd.IdleBorderThickness = 1;
@@ -244,6 +268,7 @@
             // 
             this.pnlList.Controls.Add(this.pnlNotSurvived);
             this.pnlList.Controls.Add(this.pnlSurvived);
+            this.bunifuTransition1.SetDecoration(this.pnlList, BunifuAnimatorNS.DecorationType.None);
             this.pnlList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlList.Location = new System.Drawing.Point(0, 373);
             this.pnlList.Name = "pnlList";
@@ -253,6 +278,7 @@
             // pnlNotSurvived
             // 
             this.pnlNotSurvived.Controls.Add(this.itemListNotSurvived);
+            this.bunifuTransition1.SetDecoration(this.pnlNotSurvived, BunifuAnimatorNS.DecorationType.None);
             this.pnlNotSurvived.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlNotSurvived.Location = new System.Drawing.Point(1000, 0);
             this.pnlNotSurvived.Name = "pnlNotSurvived";
@@ -262,6 +288,7 @@
             // itemListNotSurvived
             // 
             this.itemListNotSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuTransition1.SetDecoration(this.itemListNotSurvived, BunifuAnimatorNS.DecorationType.None);
             this.itemListNotSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemListNotSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.itemListNotSurvived.FormattingEnabled = true;
@@ -274,6 +301,7 @@
             // pnlSurvived
             // 
             this.pnlSurvived.Controls.Add(this.itemListSurvived);
+            this.bunifuTransition1.SetDecoration(this.pnlSurvived, BunifuAnimatorNS.DecorationType.None);
             this.pnlSurvived.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSurvived.Location = new System.Drawing.Point(0, 0);
             this.pnlSurvived.Name = "pnlSurvived";
@@ -283,6 +311,7 @@
             // itemListSurvived
             // 
             this.itemListSurvived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuTransition1.SetDecoration(this.itemListSurvived, BunifuAnimatorNS.DecorationType.None);
             this.itemListSurvived.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemListSurvived.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.itemListSurvived.FormattingEnabled = true;
@@ -297,6 +326,7 @@
             this.txtTickerFare.BackColor = System.Drawing.Color.Silver;
             this.txtTickerFare.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTickerFare.BackgroundImage")));
             this.txtTickerFare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransition1.SetDecoration(this.txtTickerFare, BunifuAnimatorNS.DecorationType.None);
             this.txtTickerFare.ForeColor = System.Drawing.Color.Black;
             this.txtTickerFare.Icon = ((System.Drawing.Image)(resources.GetObject("txtTickerFare.Icon")));
             this.txtTickerFare.Location = new System.Drawing.Point(1019, 138);
@@ -311,6 +341,7 @@
             this.txtAge.BackColor = System.Drawing.Color.Silver;
             this.txtAge.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtAge.BackgroundImage")));
             this.txtAge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransition1.SetDecoration(this.txtAge, BunifuAnimatorNS.DecorationType.None);
             this.txtAge.ForeColor = System.Drawing.Color.Black;
             this.txtAge.Icon = ((System.Drawing.Image)(resources.GetObject("txtAge.Icon")));
             this.txtAge.Location = new System.Drawing.Point(204, 138);
@@ -325,6 +356,7 @@
             this.drpEmbarked.BackColor = System.Drawing.Color.Transparent;
             this.drpEmbarked.BorderRadius = 3;
             this.drpEmbarked.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuTransition1.SetDecoration(this.drpEmbarked, BunifuAnimatorNS.DecorationType.None);
             this.drpEmbarked.DisabledColor = System.Drawing.Color.Gray;
             this.drpEmbarked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.drpEmbarked.ForeColor = System.Drawing.Color.Black;
@@ -346,6 +378,7 @@
             this.drpGender.BackColor = System.Drawing.Color.Transparent;
             this.drpGender.BorderRadius = 3;
             this.drpGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuTransition1.SetDecoration(this.drpGender, BunifuAnimatorNS.DecorationType.None);
             this.drpGender.DisabledColor = System.Drawing.Color.Gray;
             this.drpGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.drpGender.ForeColor = System.Drawing.Color.Black;
@@ -366,6 +399,7 @@
             this.drpTicketClass.BackColor = System.Drawing.Color.Transparent;
             this.drpTicketClass.BorderRadius = 3;
             this.drpTicketClass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuTransition1.SetDecoration(this.drpTicketClass, BunifuAnimatorNS.DecorationType.None);
             this.drpTicketClass.DisabledColor = System.Drawing.Color.Gray;
             this.drpTicketClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.drpTicketClass.ForeColor = System.Drawing.Color.Black;
@@ -385,6 +419,7 @@
             // lblEmbarked
             // 
             this.lblEmbarked.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblEmbarked, BunifuAnimatorNS.DecorationType.None);
             this.lblEmbarked.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblEmbarked.Location = new System.Drawing.Point(1471, 50);
             this.lblEmbarked.Name = "lblEmbarked";
@@ -395,6 +430,7 @@
             // lblTicketFare
             // 
             this.lblTicketFare.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblTicketFare, BunifuAnimatorNS.DecorationType.None);
             this.lblTicketFare.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTicketFare.Location = new System.Drawing.Point(868, 138);
             this.lblTicketFare.Name = "lblTicketFare";
@@ -405,6 +441,7 @@
             // lblParentOrChildren
             // 
             this.lblParentOrChildren.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblParentOrChildren, BunifuAnimatorNS.DecorationType.None);
             this.lblParentOrChildren.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblParentOrChildren.Location = new System.Drawing.Point(690, 87);
             this.lblParentOrChildren.Name = "lblParentOrChildren";
@@ -417,6 +454,7 @@
             this.txtParentOrChildren.BackColor = System.Drawing.Color.Silver;
             this.txtParentOrChildren.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtParentOrChildren.BackgroundImage")));
             this.txtParentOrChildren.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransition1.SetDecoration(this.txtParentOrChildren, BunifuAnimatorNS.DecorationType.None);
             this.txtParentOrChildren.ForeColor = System.Drawing.Color.Black;
             this.txtParentOrChildren.Icon = ((System.Drawing.Image)(resources.GetObject("txtParentOrChildren.Icon")));
             this.txtParentOrChildren.Location = new System.Drawing.Point(1019, 85);
@@ -429,6 +467,7 @@
             // lblSiblingsOrSpouse
             // 
             this.lblSiblingsOrSpouse.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblSiblingsOrSpouse, BunifuAnimatorNS.DecorationType.None);
             this.lblSiblingsOrSpouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSiblingsOrSpouse.Location = new System.Drawing.Point(749, 36);
             this.lblSiblingsOrSpouse.Name = "lblSiblingsOrSpouse";
@@ -441,6 +480,7 @@
             this.txtSiblingsOrSpouse.BackColor = System.Drawing.Color.Silver;
             this.txtSiblingsOrSpouse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSiblingsOrSpouse.BackgroundImage")));
             this.txtSiblingsOrSpouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransition1.SetDecoration(this.txtSiblingsOrSpouse, BunifuAnimatorNS.DecorationType.None);
             this.txtSiblingsOrSpouse.ForeColor = System.Drawing.Color.Black;
             this.txtSiblingsOrSpouse.Icon = ((System.Drawing.Image)(resources.GetObject("txtSiblingsOrSpouse.Icon")));
             this.txtSiblingsOrSpouse.Location = new System.Drawing.Point(1019, 34);
@@ -453,6 +493,7 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblAge, BunifuAnimatorNS.DecorationType.None);
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAge.Location = new System.Drawing.Point(131, 138);
             this.lblAge.Name = "lblAge";
@@ -463,6 +504,7 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblGender, BunifuAnimatorNS.DecorationType.None);
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGender.Location = new System.Drawing.Point(87, 87);
             this.lblGender.Name = "lblGender";
@@ -473,6 +515,7 @@
             // lblTicketClass
             // 
             this.lblTicketClass.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblTicketClass, BunifuAnimatorNS.DecorationType.None);
             this.lblTicketClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTicketClass.Location = new System.Drawing.Point(65, 36);
             this.lblTicketClass.Name = "lblTicketClass";
@@ -480,35 +523,46 @@
             this.lblTicketClass.TabIndex = 1;
             this.lblTicketClass.Text = "Bilet Sınıfı :";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(776, 244);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(445, 169);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 35;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             // 
             // TitanicTrain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMain);
+            this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Name = "TitanicTrain";
             this.Size = new System.Drawing.Size(2000, 745);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlList.ResumeLayout(false);
             this.pnlNotSurvived.ResumeLayout(false);
             this.pnlSurvived.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,5 +600,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblSurvived;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer timer1;
+        private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
     }
 }
