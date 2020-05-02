@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitanicTrain));
-            this.panel = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.lblModeTraining = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblNotSurvived = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblSurvived = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.prgsState = new Bunifu.Framework.UI.BunifuProgressBar();
             this.drpState = new Bunifu.Framework.UI.BunifuDropdown();
             this.lblState = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnStartTrain = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -59,58 +59,62 @@
             this.lblAge = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGender = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTicketClass = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panel.SuspendLayout();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlMain.SuspendLayout();
             this.pnlList.SuspendLayout();
             this.pnlNotSurvived.SuspendLayout();
             this.pnlSurvived.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel
+            // pnlMain
             // 
-            this.panel.BackColor = System.Drawing.Color.Transparent;
-            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
-            this.panel.Controls.Add(this.lblModeTraining);
-            this.panel.Controls.Add(this.lblNotSurvived);
-            this.panel.Controls.Add(this.lblSurvived);
-            this.panel.Controls.Add(this.prgsState);
-            this.panel.Controls.Add(this.drpState);
-            this.panel.Controls.Add(this.lblState);
-            this.panel.Controls.Add(this.btnStartTrain);
-            this.panel.Controls.Add(this.lblItemCount);
-            this.panel.Controls.Add(this.lblDataCount);
-            this.panel.Controls.Add(this.btnAdd);
-            this.panel.Controls.Add(this.pnlList);
-            this.panel.Controls.Add(this.txtTickerFare);
-            this.panel.Controls.Add(this.txtAge);
-            this.panel.Controls.Add(this.drpEmbarked);
-            this.panel.Controls.Add(this.drpGender);
-            this.panel.Controls.Add(this.drpTicketClass);
-            this.panel.Controls.Add(this.lblEmbarked);
-            this.panel.Controls.Add(this.lblTicketFare);
-            this.panel.Controls.Add(this.lblParentOrChildren);
-            this.panel.Controls.Add(this.txtParentOrChildren);
-            this.panel.Controls.Add(this.lblSiblingsOrSpouse);
-            this.panel.Controls.Add(this.txtSiblingsOrSpouse);
-            this.panel.Controls.Add(this.lblAge);
-            this.panel.Controls.Add(this.lblGender);
-            this.panel.Controls.Add(this.lblTicketClass);
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.ForeColor = System.Drawing.Color.Coral;
-            this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(2000, 745);
-            this.panel.TabIndex = 0;
+            this.pnlMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMain.BackgroundImage")));
+            this.pnlMain.Controls.Add(this.pictureBox2);
+            this.pnlMain.Controls.Add(this.lblModeTraining);
+            this.pnlMain.Controls.Add(this.lblNotSurvived);
+            this.pnlMain.Controls.Add(this.lblSurvived);
+            this.pnlMain.Controls.Add(this.drpState);
+            this.pnlMain.Controls.Add(this.lblState);
+            this.pnlMain.Controls.Add(this.btnStartTrain);
+            this.pnlMain.Controls.Add(this.lblItemCount);
+            this.pnlMain.Controls.Add(this.lblDataCount);
+            this.pnlMain.Controls.Add(this.btnAdd);
+            this.pnlMain.Controls.Add(this.pnlList);
+            this.pnlMain.Controls.Add(this.txtTickerFare);
+            this.pnlMain.Controls.Add(this.txtAge);
+            this.pnlMain.Controls.Add(this.drpEmbarked);
+            this.pnlMain.Controls.Add(this.drpGender);
+            this.pnlMain.Controls.Add(this.drpTicketClass);
+            this.pnlMain.Controls.Add(this.lblEmbarked);
+            this.pnlMain.Controls.Add(this.lblTicketFare);
+            this.pnlMain.Controls.Add(this.lblParentOrChildren);
+            this.pnlMain.Controls.Add(this.txtParentOrChildren);
+            this.pnlMain.Controls.Add(this.lblSiblingsOrSpouse);
+            this.pnlMain.Controls.Add(this.txtSiblingsOrSpouse);
+            this.pnlMain.Controls.Add(this.lblAge);
+            this.pnlMain.Controls.Add(this.lblGender);
+            this.pnlMain.Controls.Add(this.lblTicketClass);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.ForeColor = System.Drawing.Color.Coral;
+            this.pnlMain.Location = new System.Drawing.Point(0, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(2000, 745);
+            this.pnlMain.TabIndex = 0;
             // 
             // lblModeTraining
             // 
             this.lblModeTraining.AutoSize = true;
             this.lblModeTraining.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblModeTraining.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblModeTraining.Location = new System.Drawing.Point(816, 315);
+            this.lblModeTraining.Location = new System.Drawing.Point(917, 411);
             this.lblModeTraining.Name = "lblModeTraining";
             this.lblModeTraining.Size = new System.Drawing.Size(158, 25);
             this.lblModeTraining.TabIndex = 33;
             this.lblModeTraining.Text = "Model Eğitiliyor...";
+            this.lblModeTraining.Visible = false;
             // 
             // lblNotSurvived
             // 
@@ -133,20 +137,6 @@
             this.lblSurvived.Size = new System.Drawing.Size(226, 32);
             this.lblSurvived.TabIndex = 29;
             this.lblSurvived.Text = "Hayatta Kalanlar";
-            // 
-            // prgsState
-            // 
-            this.prgsState.BackColor = System.Drawing.Color.Silver;
-            this.prgsState.BorderRadius = 5;
-            this.prgsState.Location = new System.Drawing.Point(529, 271);
-            this.prgsState.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.prgsState.MaximumValue = 100;
-            this.prgsState.Name = "prgsState";
-            this.prgsState.ProgressColor = System.Drawing.Color.Teal;
-            this.prgsState.Size = new System.Drawing.Size(791, 40);
-            this.prgsState.TabIndex = 28;
-            this.prgsState.Value = 0;
-            this.prgsState.Visible = false;
             // 
             // drpState
             // 
@@ -490,25 +480,42 @@
             this.lblTicketClass.TabIndex = 1;
             this.lblTicketClass.Text = "Bilet Sınıfı :";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(776, 244);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(445, 169);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 35;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // TitanicTrain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel);
+            this.Controls.Add(this.pnlMain);
             this.Name = "TitanicTrain";
             this.Size = new System.Drawing.Size(2000, 745);
-            this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.pnlList.ResumeLayout(false);
             this.pnlNotSurvived.ResumeLayout(false);
             this.pnlSurvived.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel pnlMain;
         private Bunifu.Framework.UI.BunifuCustomLabel lblAge;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGender;
         private Bunifu.Framework.UI.BunifuCustomLabel lblTicketClass;
@@ -534,9 +541,10 @@
         private System.Windows.Forms.ListBox itemListSurvived;
         private Bunifu.Framework.UI.BunifuDropdown drpState;
         private Bunifu.Framework.UI.BunifuCustomLabel lblState;
-        private Bunifu.Framework.UI.BunifuProgressBar prgsState;
         private Bunifu.Framework.UI.BunifuCustomLabel lblModeTraining;
         private Bunifu.Framework.UI.BunifuCustomLabel lblNotSurvived;
         private Bunifu.Framework.UI.BunifuCustomLabel lblSurvived;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

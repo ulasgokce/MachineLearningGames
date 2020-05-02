@@ -110,6 +110,7 @@
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(116, 111);
             this.btnTest.TabIndex = 2;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             this.btnTest.MouseLeave += new System.EventHandler(this.btnTest_MouseLeave);
             this.btnTest.MouseHover += new System.EventHandler(this.btnTest_MouseHover);
             // 

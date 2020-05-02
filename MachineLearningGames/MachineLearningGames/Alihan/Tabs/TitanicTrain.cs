@@ -35,7 +35,6 @@ namespace MachineLearningGames.Alihan.Tabs
             //else
             //{
             pnlList.Visible = false;
-            prgsState.Visible = true;
             btnAdd.Visible = false;
             btnStartTrain.Visible = false;
             lblItemCount.Visible = false;
@@ -43,19 +42,10 @@ namespace MachineLearningGames.Alihan.Tabs
             lblSurvived.Visible = false;
             lblNotSurvived.Visible = false;
 
-            while (prgsState.Value != 100)
-            {
-                prgsState.Value = ProgressBarIncreasing();
-
-                if (_progresscounter == 99)
-                {
-                    Thread.Sleep(1000);
-                    prgsState.Value = 100;
-                    lblModeTraining.Text = "Eğitim Tamamlandı!";
-                    MessageBox.Show("Eğitim Tamamlandı!\nArtık Test Edebilirisiniz.");
-                }
-
-            }
+            timer1.Start();
+            lblModeTraining.Visible = true;
+            pictureBox2.Visible = true;
+            //}
 
 
             // }
@@ -147,6 +137,16 @@ namespace MachineLearningGames.Alihan.Tabs
             drpGender.selectedIndex = 0;
         }
 
-
+        private int _counter = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            _counter++;
+            if (_counter == 5)
+            {
+                pictureBox2.Visible = false;
+                MessageBox.Show("Eğitim Tamamlandı!\nArtık Test Edebilirisiniz.");
+                lblModeTraining.Text = "Eğitim Tamamlandı!";
+            }
+        }
     }
 }

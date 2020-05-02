@@ -151,6 +151,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Alihan\Tabs\TitanicTest.resx">
+      <DependentUpon>TitanicTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alihan\Tabs\TitanicTrain.resx">
       <DependentUpon>TitanicTrain.cs</DependentUpon>
     </EmbeddedResource>

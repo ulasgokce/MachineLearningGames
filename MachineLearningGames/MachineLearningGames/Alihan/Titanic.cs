@@ -66,5 +66,12 @@ namespace MachineLearningGames.Alihan
             TitanicTrain train = new TitanicTrain();
             pnlMain.Controls.Add(train);
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            pnlMain.Controls.Clear();
+            TitanicTest test = new TitanicTest();
+            pnlMain.Controls.Add(test);
+        }
     }
 }
