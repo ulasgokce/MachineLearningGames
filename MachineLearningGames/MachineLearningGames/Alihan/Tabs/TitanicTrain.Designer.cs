@@ -336,7 +336,7 @@
             this.txtTickerFare.Name = "txtTickerFare";
             this.txtTickerFare.Size = new System.Drawing.Size(282, 43);
             this.txtTickerFare.TabIndex = 6;
-            this.txtTickerFare.text = "0";
+            this.txtTickerFare.text = "";
             // 
             // txtAge
             // 
@@ -351,7 +351,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(282, 43);
             this.txtAge.TabIndex = 3;
-            this.txtAge.text = "0";
+            this.txtAge.text = "";
             // 
             // drpEmbarked
             // 
@@ -464,7 +464,7 @@
             this.txtParentOrChildren.Name = "txtParentOrChildren";
             this.txtParentOrChildren.Size = new System.Drawing.Size(282, 43);
             this.txtParentOrChildren.TabIndex = 5;
-            this.txtParentOrChildren.text = "0";
+            this.txtParentOrChildren.text = "";
             // 
             // lblSiblingsOrSpouse
             // 
@@ -490,7 +490,7 @@
             this.txtSiblingsOrSpouse.Name = "txtSiblingsOrSpouse";
             this.txtSiblingsOrSpouse.Size = new System.Drawing.Size(282, 43);
             this.txtSiblingsOrSpouse.TabIndex = 4;
-            this.txtSiblingsOrSpouse.text = "0";
+            this.txtSiblingsOrSpouse.text = "";
             // 
             // lblAge
             // 
